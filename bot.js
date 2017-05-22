@@ -1,10 +1,11 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
+const spotify = require('./services/spotify.js')
 const client = new Discord.Client()
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`)
-});
+})
 
 client.on('message', msg => {
   // Check if the message has been posted in a channel where the bot operates
@@ -14,6 +15,11 @@ client.on('message', msg => {
   // If message is hello, post hello too
   if (msg.content === 'hello') {
     msg.channel.sendMessage('Hello to you too, fellow !')
+  }
+
+  if (msg.content.substring(0, 8) === '!spotify') {
+    // msg.channel.sendMessage(spotify.spotifiysearch())
+    spotify.spotifiysearch(msg.channel.send(msg.content.substring(9)))
   }
 })
 
