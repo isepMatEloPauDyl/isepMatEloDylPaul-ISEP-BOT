@@ -3,7 +3,7 @@ const config = require('./config.js')
 const google = require('./services/googleTranslate.js')
 const weather = require('./services/weather.js')
 const client = new Discord.Client()
-const regTranslate = /^!Translate\[(.*?)\]/
+const regTranslate = /^!translate\[(.*?)\]/
 const regWeather = /^!weather/
 const regForecast = /^!forecast/
 
