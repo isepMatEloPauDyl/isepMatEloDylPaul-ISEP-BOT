@@ -1,19 +1,31 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
+const google = require('./services/googleTranslate.js')
+const weather = require('./services/weather.js')
 const client = new Discord.Client()
+const regTranslate = /^!Translate\[(.*?)\]/
+const regWeather = /^!weather/
+const regForecast = /^!forecast/
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`)
-});
+})
 
 client.on('message', msg => {
-  // Check if the message has been posted in a channel where the bot operates
-  // and that the author is not the bot itself
-  if (msg.channel.type !== 'dm' && (config.channel !== msg.channel.id || msg.author.id === client.user.id)) return
+  if ((msg.channel.type !== 'dm' && config.channel !== msg.channel.id) || msg.author.id === client.user.id) return
 
   // If message is hello, post hello too
   if (msg.content === 'hello') {
-    msg.channel.sendMessage('Hello to you too, fellow !')
+    msg.channel.send('Hello to you too, fellow !')
+  }
+  if (msg.content.match(regTranslate)) {
+    google.Analyse(msg)
+  }
+  if (msg.content.match(regWeather)) {
+    weather.Analyse(msg)
+  }
+  if (msg.content.match(regForecast)) {
+    weather.Analyse(msg)
   }
 })
 
