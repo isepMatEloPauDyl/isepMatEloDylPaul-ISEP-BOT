@@ -1,4 +1,3 @@
-var client = require('node-rest-client-promise').Client()
 const config = require('../config.js')
 var translate = require('@google-cloud/translate')({
   key: config.keyGoogle
