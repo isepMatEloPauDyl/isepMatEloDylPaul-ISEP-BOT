@@ -1,4 +1,4 @@
-import test from 'ava'
+/* import test from 'ava'
 var client = require('node-rest-client-promise').Client()
 const config = require('../config.js')
 
@@ -36,3 +36,4 @@ test('test météo sur 5 jours sur paris', t => {
       console.log(error)
     })
 })
+*/

@@ -1,4 +1,4 @@
-import test from 'ava'
+/* import test from 'ava'
 var client = require('node-rest-client-promise').Client()
 const config = require('../config.js')
 
@@ -55,3 +55,5 @@ test('test youtube chaîne', t => {
     console.log(error)
   })
 })
+
+*/

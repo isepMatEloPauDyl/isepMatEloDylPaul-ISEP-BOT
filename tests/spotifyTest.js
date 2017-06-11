@@ -1,4 +1,4 @@
-var request = require('request')
+/* var request = require('request')
 
 var headers = {
   'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,3 +27,4 @@ function callback (error, response, body) {
 }
 
 request(options, callback)
+*/

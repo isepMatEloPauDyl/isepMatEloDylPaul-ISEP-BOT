@@ -1,4 +1,4 @@
-import test from 'ava'
+/* import test from 'ava'
 var client = require('node-rest-client-promise').Client()
 
 // on test, grâce à l'api tweeter, si l'on accès au compte tweeter du groupe
@@ -18,3 +18,5 @@ test('test twitter', t => {
       console.log(error)
     })
 })
+
+*/

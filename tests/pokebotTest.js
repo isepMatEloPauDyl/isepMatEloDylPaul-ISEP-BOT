@@ -1,4 +1,4 @@
-import test from 'ava'
+/* import test from 'ava'
 var client = require('node-rest-client-promise').Client()
 
 // on teste avec l'api pokemon si l'on accéde au serivce pokemon
@@ -36,3 +36,4 @@ test('test recherche évolution pokémon', t => {
     console.log(error)
   })
 })
+*/
