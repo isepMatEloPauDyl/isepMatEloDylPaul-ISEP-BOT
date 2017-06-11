@@ -1,11 +1,8 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
 const google = require('./services/googleTranslate.js')
-const weather = require('./services/weather.js')
 const client = new Discord.Client()
 const regTranslate = /^!translate\[(.*?)\]/
-const regWeather = /^!weather/
-const regForecast = /^!forecast/
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`)
@@ -20,12 +17,6 @@ client.on('message', msg => {
   }
   if (msg.content.match(regTranslate)) {
     google.Analyse(msg)
-  }
-  if (msg.content.match(regWeather)) {
-    weather.Analyse(msg)
-  }
-  if (msg.content.match(regForecast)) {
-    weather.Analyse(msg)
   }
 })
 
