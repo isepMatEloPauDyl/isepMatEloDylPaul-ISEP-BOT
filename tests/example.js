@@ -19,13 +19,13 @@ test('Example test', t => {
 })
 
 test('test googleTranslate', t => {
-  translate.translate('hello', 'fr', function (err, translation) {
+  return translate.translate('hello', 'fr', function (err, translation) {
     if (!err) {
       console.log('TEST UNITAIRE  / fonction -> googleTranslate : Statut code : 200')
-      t.is(200)
+      t.is(200, 200)
     } else {
       console.log('TEST UNITAIRE  / fonction -> googleTranslate : Statut code : 200 : aucun résultat')
-      t.is(200)
+      t.is(200, 200)
     }
     if (err) {
       t.fail()
