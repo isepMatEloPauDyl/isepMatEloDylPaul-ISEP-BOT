@@ -8,5 +8,6 @@ module.exports = {
   keyWeather: '8c8159c788c1b8dadc56892eaf228d32',
   keyYoutube: 'AIzaSyAv3N1nxYqMxAKduO4OrNzCKzdrWYCn5SY',
   spotifyClientId: 'dd036d3474be4ae6b6839d0042ffd7b4',
+  keyGoogle: 'AIzaSyAv3N1nxYqMxAKduO4OrNzCKzdrWYCn5SY',
   spotifyClientSecret: '9ef12b4c5cc84e0d8d79eba767adfc52'
 }

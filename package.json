@@ -18,16 +18,11 @@
   },
   "homepage": "https://gitlab.com/pierrick.bignet/cloud-discord-bot#README",
   "dependencies": {
-    "bufferutil": "^3.0.1",
+    "@google-cloud/translate": "^0.8.2",
     "discord.js": "^11.1.0",
-    "erlpack": "github:hammerandchisel/erlpack",
     "eslint-config-standard": "^10.2.1",
-    "libsodium-wrappers": "^0.5.1",
-    "node-opus": "^0.2.6",
     "node-rest-client-promise": "^2.0.0",
-    "opusscript": "0.0.3",
-    "twitter": "^1.7.0",
-    "uws": "^0.14.5"
+    "twitter": "^1.7.0"
   },
   "devDependencies": {
     "ava": "^0.19.1",
