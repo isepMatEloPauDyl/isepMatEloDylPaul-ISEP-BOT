@@ -1,11 +1,13 @@
 import test from 'ava'
+// var test = require('ava')
 var client = require('node-rest-client-promise').Client()
 
 test('Example test', t => {
   return client.getPromise('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=b05787eda8d8f7967925692ea52134d2')
     .catch((error) => {
       t.fail()
-      throw error
+      // throw error
+      console.log('error' + error)
     })
     .then((res) => {
       console.log(res.response.statusCode)
