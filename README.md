@@ -28,3 +28,4 @@ Les commandes sont :
 
 l'URL de notre web app AZURE http://iseppaulelodylmatt.azurewebsites.net/
 
+Nous avons rencontré des problèmes liés à l'utilisation de ava et Travis avec les tests unitaires. Ces derniers ne fonctionnent que en local et sans l'utilisation de la librairie ava.
