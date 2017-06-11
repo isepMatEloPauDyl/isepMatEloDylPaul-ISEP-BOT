@@ -1,10 +1,12 @@
 const Discord = require('discord.js')
 const config = require('./config.js')
+const google = require('./services/googleTranslate.js')
 const spotify = require('./services/spotify.js')
 const twitter = require('./services/twitter.js')
 const youtube = require('./services/youtube.js')
 const wheater = require('./services/openWeatherMap.js')
 const pokebot = require('./services/pokebot.js')
+const regTranslate = /^!translate\[(.*?)\]/
 
 const client = new Discord.Client()
 const regSpotify = /^!spotify/ // régex à respecter pour appeler le service spotify
@@ -54,6 +56,9 @@ client.on('message', msg => {
   // si le message match avec la régex forecast alors on appelle la fonction analyze du service openWeatherMap
   if (msg.content.match(regForecast)) {
     wheater.analyze(msg) // Prend en paramètre le contenue de message pour le traité
+  }
+  if (msg.content.match(regTranslate)) {
+    google.Analyse(msg)
   }
   // si le message match avec la régex pokémon alors on appelle la fonction analyze du service pokebot
   if (msg.content.match(regPokemon)) {
