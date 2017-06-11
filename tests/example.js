@@ -1,4 +1,4 @@
-/* import test from 'ava'
+import test from 'ava'
 // var test = require('ava')
 var client = require('node-rest-client-promise').Client()
 
@@ -14,4 +14,3 @@ test('Example test', t => {
       t.is(res.response.statusCode, 200)
     })
 })
-*/
