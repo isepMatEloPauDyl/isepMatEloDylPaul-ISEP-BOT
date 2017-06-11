@@ -37,7 +37,8 @@ test('test googleTranslate', t => {
   translate.translate('hello', 'fr', function (err, translation) {
     if (!err) {
       console.log('TEST UNITAIRE  / fonction -> googleTranslate : Statut code : 200')
-      t.is(200)
+      var test = 200
+      t.is(test, 200)
     }
     if (err) {
       t.fail()
