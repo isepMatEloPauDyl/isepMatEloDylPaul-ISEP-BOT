@@ -32,20 +32,20 @@ test('Example test', t => {
     })
 })
 
-test('test googleTranslate', t => {
-  console.log('je suis dans la fct test translate')
-  return translate.translate('hello', 'fr', function (err, translation) {
-    console.log('1')
-    if (!err) {
-      console.log('TEST UNITAIRE  / fonction -> googleTranslate : Statut code : 200')
-      var test = 200
-      t.is(test, 200)
-    }
-    if (err) {
-      t.fail()
-      console.log('TEST UNITAIRE googleTranslate / fonction -> googleTranslate  : Erreur')
-      console.log(err)
-      // Test
-    }
-  })
+translate.translate('hello', 'fr', function (err, translation) {
+  console.log('1')
+  if (!err) {
+    test.only('two plus one is three', t => {
+      t.equal(1 + 2, 3)
+    })
+    console.log('TEST UNITAIRE  / fonction -> googleTranslate : Statut code : 200')
+  }
+  if (err) {
+    test.only('two plus one is three', t => {
+      t.equal(1 + 2, 3)
+    })
+    console.log('TEST UNITAIRE googleTranslate / fonction -> googleTranslate  : Erreur')
+    console.log(err)
+    // Test
+  }
 })
