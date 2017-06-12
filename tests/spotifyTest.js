@@ -1,3 +1,4 @@
+import test from 'ava'
 var request = require('request')
 
 var headers = {
@@ -16,14 +17,18 @@ var options = {
 }
 
 function callback (error, response, body) {
-  if (!error && response.statusCode === 200) {
-    console.log('access_token : ' + body.access_token)
-    console.log('token_type : ' + body.token_type)
-
-    console.log('TEST UNITAIRE spotify / fonction -> récupération de l\'acces token : Statut code : ' + response.statusCode)
-  } else {
-    console.log('TEST UNITAIRE spotify / fonction -> récupération de l\'acces token : Statut code : ' + response.statusCode)
-  }
+  test('test twitter', t => {
+    if (error) {
+      console.log('err ', error)
+      t.fail()
+    } else if (body.response.statusCode === 200) {
+      console.log('TEST UNITAIRE spotify / fonction -> récupération de l\'acces token : Statut code : ' + body.response.statusCode)
+      t.is(body.response.statusCode, 200)
+    } else {
+      console.log('TEST UNITAIRE spotify / fonction -> récupération de l\'acces token : Statut code : ' + response.statusCode)
+      t.fail()
+    }
+  })
 }
 
 request(options, callback)
