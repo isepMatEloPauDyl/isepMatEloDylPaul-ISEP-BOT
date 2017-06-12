@@ -3,7 +3,7 @@ var client = require('node-rest-client-promise').Client()
 
 // on teste avec l'api pokemon si l'on accéde au serivce pokemon
 test('test recherche pokémon', t => {
-  client.getPromise('https://pokeapi.co/api/v2/pokemon/charmander')
+  client.getPromise('https://pokeapi.co/api/v2/pokemon/charmander/')
   .then((res) => {
     console.log('TEST UNITAIRE pokeapi / fonction -> : pokemon statut : ' + res.response.statusCode)
     t.is(res.response.statusCode, 200)
@@ -17,7 +17,7 @@ test('test recherche pokémon', t => {
 
 test('test recherche évolution pokémon', t => {
 // on teste avec l'api pokemon si l'on accéde au serivce pokemon-species
-  client.getPromise('https://pokeapi.co/api/v2/pokemon-species/charmander')
+  client.getPromise('https://pokeapi.co/api/v2/pokemon-species/charmander/')
   .then((res) => {
     console.log('TEST UNITAIRE pokeapi / fonction -> : pokemon-species statut : ' + res.response.statusCode)
     t.is(res.response.statusCode, 200)
